@@ -1,20 +1,44 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useContext, useEffect } from "react"
+import { StyleSheet, Text, SafeAreaView, StatusBar, ActivityIndicator, View } from 'react-native'
+import Toast from 'react-native-toast-message';
+
+import MainNavigator from "./src/navigations/MainNavigator"
+//import AuthRoutes from "./navigations/AuthsNavigator"
+import { AuthContext } from "./src/contexts/AuthCont"
+import AuthProvider from "./src/contexts/AuthCont"
+
 
 export default function App() {
+
+  const { signed, ToggleEmail } = useContext(AuthContext)
+
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start funcionando no seu app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AuthProvider>
+      <MainNavigator />
+      <Toast />
+    </AuthProvider>
   );
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  container : {
+      flex : 1,
+      justifyContent : 'center',
+      alignItems : 'center',
+      backgroundColor : 'black'
   },
-});
+  logo : {
+      fontSize : 52,
+      fontWeight : 'bold',
+      color : "#fff",
+  },
+  loading : {
+      justifyContent : 'center',
+      padding : 30,
+      marginTop : 45
+  }
+})
+
+

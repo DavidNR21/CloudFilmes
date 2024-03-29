@@ -19,7 +19,7 @@ const ModalNotificacao = ({ handleVi, handleSet, h, b }) => {
         if (notifyApi.data[0]['Notificacao'] == ''){
             setH1('')
             setBody('')
-            console.log('vazio')
+            
         }
         else{
             let jsonS = JSON.parse(notifyApi.data[0]['Notificacao'])
@@ -33,7 +33,7 @@ const ModalNotificacao = ({ handleVi, handleSet, h, b }) => {
         if (handleVi){
             handleNotificacao()
         }
-        console.log(handleVi)
+        
     },[handleVi])
 
     

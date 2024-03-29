@@ -17,7 +17,7 @@ const Onboarding = ({ navigation }) => {
             colors={['rgba(5, 5, 5, 0.4)', 'rgba(5, 5, 5, 8)']}
             style={styles.grad}>
                 <View style = {styles.logo}>
-                    <Text style={styles.texth1}>Starflix</Text>
+                    <Text style={styles.texth1}>Cloud Filmes</Text>
                 </View>
                 <View style = {styles.subtitulo}>
                     <Text style={styles.texth2}>Todos os seus Titulos favoritos. agora em um só Lugar.</Text>
@@ -37,7 +37,7 @@ const Onboarding = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
                 <View style = {{marginTop : 20}}>
-                    <Text style = {{color : '#808080', fontSize : 16, fontWeight : '600'}} onPress={
+                    <Text style = {{color : '#808080', fontSize : 17, fontWeight : '600'}} onPress={
                         () => navigation.navigate('Login')
                     } >Fazer Login</Text>
                 </View>

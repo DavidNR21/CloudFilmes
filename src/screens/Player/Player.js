@@ -118,7 +118,7 @@ const PlayerScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex : 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#050505',
   },
   video: {
     width: '99%',

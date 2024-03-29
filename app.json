@@ -2,7 +2,7 @@
   "expo": {
     "name": "CloudFilmes",
     "slug": "CloudFilmes",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -18,10 +18,12 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode" : 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.CloudFilmes.craft"
     },
     "web": {
       "favicon": "./assets/favicon.png"
