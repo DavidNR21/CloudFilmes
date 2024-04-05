@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         backgroundColor : 'black'
     },
     img : {
-        height : '92%'
+        height : '95%'
     },
     grad : {
         width : '100%',

@@ -22,8 +22,8 @@ const ModalAssistidos = ({ handleVi, handleSet, obj }) => {
             Toast.show({
                 type: 'success',
                 text1: 'Historico',
-                text2: `${obj.Nome} já foi excluido, atualize o app se necessario.`,
-                visibilityTime : 1000
+                text2: `${obj.Nome} já foi excluido, atualize se necessario.`,
+                visibilityTime : 3000
             });
 
         } catch (error) {
@@ -70,9 +70,9 @@ const styles = StyleSheet.create({
         marginTop: 15
     },
     modalView: {
-        backgroundColor : '#151515',
+        backgroundColor : '#262626',
         margin: 20,
-        width : '75%',
+        width : '70%',
         height : 180,
         borderRadius: 8,
         shadowColor: '#000',
@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
         //backgroundColor : 'blue'
     },
     textTitulo : {
+        width : '85%',
         fontSize : 16,
         fontWeight : '500',
         color : '#fff',

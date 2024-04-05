@@ -4,11 +4,7 @@ export const Config = {
     baseURL: 'https://api.baserow.io/api/database',
     token:
       'PolpZIUWEAUtJU5fjB4IT4Pk00Wo0kg3',
-  };
-
-//https://api.baserow.io/api/database/rows/table/250385/?user_field_names=true&filter__field_1768091__boolean=true&search=
-
-// https://api.baserow.io/api/database/rows/table/250385/?user_field_names=true
+};
 
 
 export const buscar_usuario_Email = async (email_input) => {

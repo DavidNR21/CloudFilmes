@@ -45,7 +45,7 @@ const Planos = () => {
                   },
                   body: JSON.stringify({
                     "description" : "Assinatura Premium",
-                    "transaction_amount" : 1.00,
+                    "transaction_amount" : 6.50,
                     "payment_method_id" : "pix",
                     "payer" : {
                         "email" : `${test}`,

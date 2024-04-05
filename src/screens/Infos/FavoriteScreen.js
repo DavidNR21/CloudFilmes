@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, Pressable, Image, FlatList, ActivityIndicator} from 'react-native';
+import React, { useEffect, useState, useContext, useCallback } from 'react';
+import { StyleSheet, View, Text, SafeAreaView, Pressable, Image, FlatList, ActivityIndicator, RefreshControl} from 'react-native';
 import { Icon } from '@rneui/base';
 import Toast from 'react-native-toast-message';
 
@@ -88,28 +88,40 @@ const FavoriteScreen = ({ navigation }) => {
   const [favs, setFavs] = useState([])
   const [loading, setLoading] = useState(true)
   const [nfavs, setNfavs] = useState(0)
+  const [refreshing, setRefreshing] = useState(false)
+
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+
+    fecthFavs()
+
+    setRefreshing(false)
+  }, []);
+
+
+  const fecthFavs = useCallback(async () => {
+    try {
+      const query_favs = await buscar_Favs(test);
+
+      setFavs(query_favs.data);
+      setNfavs(query_favs.count);
+      setLoading(false);
+
+    } catch (error) {
+      console.error('Erro ao buscar os favoritos:', error);
+      Toast.show({
+        type: 'error',
+        text1: 'Erro',
+        text2: 'Ocorreu um erro ao buscar os favoritos.'
+      });
+      setLoading(false);
+    }
+  }, []);
 
 
   useEffect(() => {
-    const fecthFavs = async () => {
-      try {
-        const query_favs = await buscar_Favs(test);
 
-        setFavs(query_favs.data);
-        setNfavs(query_favs.count);
-        setLoading(false);
-
-      } catch (error) {
-        console.error('Erro ao buscar os favoritos:', error);
-        Toast.show({
-          type: 'error',
-          text1: 'Erro',
-          text2: 'Ocorreu um erro ao buscar os favoritos.'
-        });
-        setLoading(false);
-      }
-    };
-  
     fecthFavs();
   },[])
 
@@ -141,6 +153,7 @@ const FavoriteScreen = ({ navigation }) => {
               keyExtractor={item => item.Nome} // Supondo que cada item tenha uma propriedade 'id'
               maxToRenderPerBatch={8}
               initialNumToRender={8}
+              refreshControl={<RefreshControl progressViewOffset={52} refreshing={refreshing} onRefresh={onRefresh} />}
             />
 
         </>

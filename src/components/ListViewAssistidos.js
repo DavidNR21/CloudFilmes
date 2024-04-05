@@ -8,23 +8,6 @@ import { Icon } from "@rneui/base"
 import { useNavigation } from "@react-navigation/native";
 
 
-const DOCUMENT = [
-    {
-        id: 'teste1',
-        url: 'https://cdn.ome.lt/q4bFjtoSWRK_ik5lA5q1GUpUcUU=/1200x630/smart/extras/conteudos/spy-x-family_b686TAs.jpg'
-    },
-    {
-        id: 'flash24',
-        url: 'https://cdn.ome.lt/q4bFjtoSWRK_ik5lA5q1GUpUcUU=/1200x630/smart/extras/conteudos/spy-x-family_b686TAs.jpg'
-    },
-    {
-        id: 'fla',
-        url: 'https://cdn.ome.lt/q4bFjtoSWRK_ik5lA5q1GUpUcUU=/1200x630/smart/extras/conteudos/spy-x-family_b686TAs.jpg'
-    }
-]
-
-
-
 
 const ListViewAssistidos = ({ hist }) => {
     const navigation = useNavigation()
@@ -93,6 +76,7 @@ const ListViewAssistidos = ({ hist }) => {
     )
 }
 
+
 const styles = StyleSheet.create({
     list: {
         marginLeft: 8,
@@ -101,14 +85,14 @@ const styles = StyleSheet.create({
     logo: {
         width: '100%',
         height: '100%',
-        backgroundColor: 'red',
+        backgroundColor: '#808080',
         borderRadius: 5,
         //resizeMode : 'contain'
     },
     views: {
         height: 200,
         width: 350,
-        backgroundColor: 'blue',
+        backgroundColor: '#808080',
         marginTop: 10,
         marginRight: 10,
         borderRadius: 5,
@@ -126,6 +110,7 @@ const styles = StyleSheet.create({
         zIndex : 98
     },
     textTitulo : {
+        width : '90%',
         fontSize : 17,
         fontWeight : '500',
         color : '#fff',

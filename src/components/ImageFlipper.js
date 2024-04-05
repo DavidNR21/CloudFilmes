@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     },
     buttonPlay : {
         height : 50,
-        width : 250,
+        width : 255,
         backgroundColor : '#50125D',
         marginTop : 15,
         borderRadius : 8,
