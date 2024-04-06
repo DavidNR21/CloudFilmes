@@ -47,7 +47,7 @@ const GridView = ({ doc }) => {
             keyExtractor={item => item.Nome} // Supondo que cada item tenha uma propriedade 'id'
             numColumns={columns_number()} // Define o número de colunas no grid
             maxToRenderPerBatch={8}
-            initialNumToRender={8}
+            initialNumToRender={9}
             contentContainerStyle={{ paddingVertical: 10, paddingHorizontal: 5 }} // Espaçamento entre os itens
         />
     )
