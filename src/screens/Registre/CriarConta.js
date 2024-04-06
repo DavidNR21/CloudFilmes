@@ -24,7 +24,7 @@ function CriarConta({ navigation }) {
 
     Alert.alert(
       'Criar Conta',
-      'Voçe terá 2 dias de teste, assim que acabar terá que renovar a assinatura',
+      'Voce terá 2 dias de teste, assim que acabar terá que renovar a assinatura',
       [{text : 'ok'}]
     )
 
@@ -112,7 +112,7 @@ function CriarConta({ navigation }) {
     <SafeAreaView style = {styles.container}>
       <View>
         <Text style = {styles.h1}>
-          Starflix
+          CloudFilmes
         </Text>
       </View>
       <View style = {{marginVertical : 15}}>

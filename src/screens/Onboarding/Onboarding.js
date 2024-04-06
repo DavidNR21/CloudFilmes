@@ -14,7 +14,7 @@ const Onboarding = ({ navigation }) => {
             <ImageBackground source={require('../../../assets/apresentação_end.png')} style = {styles.img} />
             <LinearGradient
             // Button Linear Gradient
-            colors={['rgba(5, 5, 5, 0.4)', 'rgba(5, 5, 5, 8)']}
+            colors={['rgba(5, 5, 5, 0.4)', 'rgba(5, 5, 5, 1)']}
             style={styles.grad}>
                 <View style = {styles.logo}>
                     <Text style={styles.texth1}>Cloud Filmes</Text>

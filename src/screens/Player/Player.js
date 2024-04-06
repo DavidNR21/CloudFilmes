@@ -87,7 +87,7 @@ const PlayerScreen = ({ route }) => {
       backAction,
     );
 
-    console.log(h1, eps)
+    //console.log(h1, eps)
 
     return () => backHandler.remove();
   }, []);

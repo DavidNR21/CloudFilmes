@@ -57,16 +57,6 @@ const HomeScreen = ({ navigation }) => {
     }
   };
 
-  
-  const clearAll = async () => {
-    try {
-      await AsyncStorage.clear()
-    } catch(e) {
-      // clear error
-    }
-  
-    console.log('Done.')
-  }
 
   ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -155,7 +145,7 @@ const HomeScreen = ({ navigation }) => {
       const histotyMovies = await AsyncStorage.getItem("histotyMovies");
       const histotyMoviesArray = histotyMovies ? JSON.parse(histotyMovies) : [];
       sethistotyMovies(histotyMoviesArray);
-      console.log(histotyMoviesArray.length, histotyMoviesArray);
+      //console.log(histotyMoviesArray.length, histotyMoviesArray);
 
     } catch (error) {
       console.log(error);
@@ -197,7 +187,7 @@ const HomeScreen = ({ navigation }) => {
 
 
               <View style={styles.BarTopic}>
-                <Text style={styles.textTopic} onPress={clearAll}>
+                <Text style={styles.textTopic}>
                   Lançamentos
                 </Text>
                 <Text style={styles.textVer} onPress={() => navigation.navigate("Ver",{Item : 'Lancamentos'})} >

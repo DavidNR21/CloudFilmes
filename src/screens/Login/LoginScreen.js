@@ -32,7 +32,7 @@ function LoginScreen() {
   };
 
   const handleOpenWhatsApp = () => {
-    const phoneNumber = "+5583998700202";
+    const phoneNumber = "+5583986885083";
     Linking.openURL(`whatsapp://send?phone=${phoneNumber}`);
   };
 

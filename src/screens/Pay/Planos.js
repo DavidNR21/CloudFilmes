@@ -49,7 +49,7 @@ const Planos = () => {
                     "payment_method_id" : "pix",
                     "payer" : {
                         "email" : `${test}`,
-                        "first_name": "Fulano",
+                        "first_name": "Cliente",
                         "last_name": "sicrano",
                         "identification" : {
                             "type" : "CPF",
