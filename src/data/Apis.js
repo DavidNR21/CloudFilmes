@@ -3,7 +3,7 @@ import React from "react";
 export const Config = {
     baseURL: 'https://api.baserow.io/api/database',
     token:
-      'PolpZIUWEAUtJU5fjB4IT4Pk00Wo0kg3',
+      '',
 };
 
 
