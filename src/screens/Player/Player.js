@@ -94,22 +94,20 @@ const PlayerScreen = ({ route }) => {
 
 
   return (
-    <SafeAreaView style = {styles.container}>
-      <>
-        <Video
-          ref={video}
-          style={styles.video}
-          source={{
-            uri: link,
-          }}
-          useNativeControls
-          resizeMode={ResizeMode.CONTAIN}
-          onLoad={() => toggleFavouriteAndSave()}
-          onFullscreenUpdate={(s) => setFull(s)}
-          onPlaybackStatusUpdate={(st) => setStatus(st)}
-        />
-      </>
-    </SafeAreaView>
+    <>
+      <Video
+        ref={video}
+        style={styles.video}
+        source={{
+          uri: link,
+        }}
+        useNativeControls
+        resizeMode={ResizeMode.CONTAIN}
+        onLoad={() => toggleFavouriteAndSave()}
+        onFullscreenUpdate={(s) => setFull(s)}
+        onPlaybackStatusUpdate={(st) => setStatus(st)}
+      />
+    </>
   );
 }
 
