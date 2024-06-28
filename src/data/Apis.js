@@ -419,8 +419,8 @@ export const paymentVerify = async (i) => {
       const response = await fetch(`https://api.mercadopago.com/v1/payments/${i}`, {
         method: 'GET',
         headers: {
-          'X-Idempotency-Key': '0d5020ed-1af6-469c-ae06-c3bec19954bb',
-          'Authorization': 'Bearer APP_USR-38498156768544-021419-530b09f1b1a848b43fe205160e062be5-577050871'
+          'X-Idempotency-Key': '0d502ed-1af6-469c-ae06-c3bec1995',
+          'Authorization': 'Bearer APP_USR-384986768544-021419-530b82060e0be5-7050871'
         }
       });
     
